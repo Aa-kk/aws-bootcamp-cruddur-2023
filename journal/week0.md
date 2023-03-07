@@ -15,10 +15,11 @@ Since I've been using AWS for about a year plus I already had my account setup a
 
 ### 2. Recreating Conceptual Diagram in Lucid Charts or on a Napkin
 
-I recreated the conceptual diagram and also the logical diagram of the application using Lucid charts, previously I used draw.io for architectual diagrams, hence this was my first time using lucid charts and I think they're both similar. Here is the conceptual  diagram.
+I recreated the conceptual diagram and also the logical diagram of the application using Lucid charts, previously I used draw.io for architectual diagrams, hence this was my first time using lucid charts and I think they're both similar. Here is the conceptual  diagram.  
 ![Cruddur Conceptual Diagram!](/_docs/assets/Cruddur-Conceptual-Diagram.jpg)  
 
-And here is the logical architectural diagram.
+And here is the logical architectural diagram.  
+
 ![Cruddur Logical Diagram!](/_docs/assets/Cruddur-Logical%20Diagram.png)
 
 ## 3. Create a Budget/Billing Alarm
@@ -39,7 +40,7 @@ using this command:
 
 ## Setting Up Gitpod and configuring the AWS CLI
 
-First time I got to use gitpod and I think it's a cool tool (Cloud based DE) for developers.  After setting up a gitpod account and installing the plugin in my browser I installed the AWS CLI manually and also configured Gitpod to always have the AWS CLI installed into every workpace using the by assiging the process as a task in the [.gitpod.yml](https://github.com/Aa-kk/aws-bootcamp-cruddur-2023/blob/main/.gitpod.yml)  
+First time I got to use gitpod and I think it's a cool tool (Cloud based DE) for developers.  After setting up a gitpod account and installing the plugin in my browser I installed the AWS CLI manually and also configured Gitpod to always have the AWS CLI installed into every workpace created by setting up a task in the [.gitpod.yml](https://github.com/Aa-kk/aws-bootcamp-cruddur-2023/blob/main/.gitpod.yml)  
 
 Adding my aws credentials to gitpod was pretty easy using  
 `gp env AWS_ACCESS_KEY_ID=""`  
