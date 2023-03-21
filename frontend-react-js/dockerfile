@@ -1,12 +1,14 @@
-FROM node:16.18
-
-ENV PORT=3000
-
-COPY . /frontend-react-js
+# Build stage
+FROM node:16.18 AS build
 WORKDIR /frontend-react-js
-RUN npm install
+COPY . .
+RUN npm install && npm run build
+
+# Production stage
+FROM node:16.18-alpine
+ENV PORT=3000
+COPY --from=build /frontend-react-js /frontend-react-js
+WORKDIR /frontend-react-js
 EXPOSE ${PORT}
-# Make npm_start.sh script executable 
-RUN chmod +x ./npm_start.sh
-ENTRYPOINT ["./npm_start.sh"]
-#CMD ["npm", "start"]
+RUN ls -la /frontend-react-js
+CMD ["npm", "start"]
