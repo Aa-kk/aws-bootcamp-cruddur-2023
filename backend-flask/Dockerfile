@@ -12,8 +12,9 @@ COPY . .
 FROM python:3.10-slim-buster
 
 ENV FLASK_APP=app.py
-ENV FLASK_ENV=production
-
+ENV FLASK_ENV=production 
+RUN apt-get -y update 
+RUN apt-get -y install curl
 COPY --from=build /install /usr/local
 
 COPY . .
